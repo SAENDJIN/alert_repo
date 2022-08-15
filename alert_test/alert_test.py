@@ -12,7 +12,9 @@ def run(playwright: Playwright) -> None:
 
     expect(page.locator(
         "//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]/div[2]/div[2]/article[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[5]/div[1]/div[2]/div[1]/div[1]/p[1]")) \
-        .to_contain_text("slotvibe.com")
+        .to_contain_text("slo1tvibe.com")
+
+    # assert
     context.close()
     browser.close()
 
