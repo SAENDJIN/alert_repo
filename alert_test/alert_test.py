@@ -9,13 +9,22 @@ def run(playwright: Playwright) -> None:
 
     page.locator("button:has-text(\"S-Z\")").click()
     page.locator("button:has-text(\"J-R\")").click()
+    #
+    # result = page.inner_text("//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]"
+    #                          "/div[2]/div[2]/article[1]/div[1]/div[2]/div[6]/div[1]/"
+    #                          "div[1]/div[5]/div[1]/div[2]/div[1]/div[1]/p[1]") == 'slotvibe.com'
+    # assert result == "slotvibe.com"
+    # # assert page.locator("//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]/div["
+    # #                     "2]/div[2]/article[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[5]/d"
+    # #                     "iv[1]/div[2]/div[1]/div[1]/p[1]").input_value("slotvibe.com")
+    text = page.locator("//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]/div["
+                          "2]/div[2]/article[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[5]/d"
+                          "iv[1]/div[2]/div[1]/div[1]/p[1]").text_content()
+    assert "slotvibe.com" in text
+    # expect(page.locator(
+    #     "//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]/div[2]/div[2]/article[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[5]/div[1]/div[2]/div[1]/div[1]/p[1]")) \
+    #     .to_contain_text("slotvibe.com")
 
-    # result = \
-    expect(page.locator(
-            "//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]/div[2]/div[2]/article[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[5]/div[1]/div[2]/div[1]/div[1]/p[1]")) \
-            .to_contain_text("slotvibe.com")
-
-    # assert result
     context.close()
     browser.close()
 
