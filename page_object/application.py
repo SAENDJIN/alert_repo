@@ -15,9 +15,10 @@ class Alert:
         self.page.locator("button:has-text(\"J-R\")").click()
 
     def check_result(self):
-        return self.page.locator("//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]/div["
+        text = self.page.locator("//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]/div["
                                  "2]/div[2]/article[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[5]/d"
-                                 "iv[1]/div[2]/div[1]/div[1]/p[1]").is_visible("text='sl12otvibe.com'")
+                                 "iv[1]/div[2]/div[1]/div[1]/p[1]").text_content()
+        return "slotv123ibe.com" in text
 
     def close(self):
         self.context.close()
