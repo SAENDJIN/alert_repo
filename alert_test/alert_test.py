@@ -20,7 +20,7 @@
 #     text = page.locator("//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]/div["
 #                         "2]/div[2]/article[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[5]/d"
 #                         "iv[1]/div[2]/div[1]/div[1]/p[1]").text_content()
-#     assert "slotsberlin5.com" in text
+#     assert "zoome.casino" not in text
 #     # expect(page.locator(
 #     #     "//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]/div[2]/div[2]/article[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[5]/div[1]/div[2]/div[1]/div[1]/p[1]")) \
 #     #     .to_contain_text("slotvibe.com")

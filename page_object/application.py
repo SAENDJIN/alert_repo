@@ -18,7 +18,7 @@ class Alert:
         text = self.page.locator("//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]/div["
                                  "2]/div[2]/article[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[5]/d"
                                  "iv[1]/div[2]/div[1]/div[1]/p[1]").text_content()
-        return "slotv123ibe.com" in text
+        return "zoome.casino" not in text
 
     def close(self):
         self.context.close()
