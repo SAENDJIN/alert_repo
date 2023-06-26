@@ -19,7 +19,7 @@ class AlertSz:
         textsz = self.page.locator("//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]/div["
                                    "2]/div[2]/article[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[5]/d"
                                    "iv[1]/div[2]/div[1]/div[1]/p[1]").text_content()
-        return ["zoome3.casino", "zoome.casino", "thezoome.com"] not in textsz
+        return not any(item in textsz for item in ["zoome3.casino", "zoome.casino", "thezoome.com"])
 
     def close(self):
         self.context.close()
@@ -42,7 +42,7 @@ class AlertJr:
         textjr = self.page.locator("//html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/main[1]/div[2]/div[2]/article[1]/div"
                                    "[1]/div[2]/div[6]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/p[1]") \
             .text_content()
-        return ["oxi.casino", "oxi1.casino"] not in textjr
+        return not any(item in textjr for item in ["oxi.casino", "oxi1.casino"])
 
     def close(self):
         self.context.close()
